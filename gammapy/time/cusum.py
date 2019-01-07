@@ -26,9 +26,6 @@ def cusum(timedelta):
     [1]to be updated ...
     """
 
-    somme = 0
-    signif_max = 0
-    signi = 0
     delta_corrected = (timedelta - np.mean(timedelta))
     somme = np.cumsum(delta_corrected)
     indice = np.array(np.linspace(1,len(delta_corrected),len(delta_corrected)))
