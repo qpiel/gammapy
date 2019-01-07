@@ -3,13 +3,13 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from numpy.testing import assert_allclose
 from astropy.units import Quantity
 from gammapy.time import random_times
-from gammapy.time.cusum import cusum 
+from gammapy.time.onoff import onoff
 
-
-def test_cusum():
+def test_onoff(dT):
     rate = Quantity(10, "s^-1")
-    time_delta = random_times(10000, rate=rate, return_diff=True, random_state=0) 
-    signi = cusum(time_delta)
-    assert_allclose(signi.value, 2.251628)
-    
-test_cusum()
+    time_delta = random_times(100, rate=rate, return_diff=True, random_state=0)
+    signi = onoff(time_delta,dT)
+    assert_allclose(signi, 0.03324258256522262)
+    print(mr)
+
+test_onoff(1)

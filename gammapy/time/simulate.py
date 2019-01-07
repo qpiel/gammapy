@@ -1,6 +1,11 @@
 # Licensed under a 3-clause BSD style license - see LICENSE.rst
 from __future__ import absolute_import, division, print_function, unicode_literals
 from astropy.time import TimeDelta
+#import os,sys,inspect
+#current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+#parent_dir = os.path.dirname(current_dir)
+#sys.path.insert(0, parent_dir) 
+#import utils.random
 from ..utils.random import get_random_state
 
 __all__ = ["random_times"]
